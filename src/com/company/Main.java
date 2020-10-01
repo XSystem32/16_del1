@@ -18,6 +18,16 @@ public class Main {
             //Her tillader vi at kaste terningerne max 20 gange, det er rimelig for at få resultat og tag en vinder
             for (int i = 0; i < 20; i++) {
 
+                //Her kaster man en terning og tilføjer resultatet til player 1 indtil han rammer 40 eller ovre
+                playerOne += castDice();
+
+                //Her sker det samme, bare med en anden player
+                playerTwo += castDice();
+
+                //De her to sysout er lavet for at se hvor langt hver player er
+                System.out.println("Player 1 result is: " + playerOne);
+                System.out.println("Player 2 result is: " + playerTwo);
+
 
 
 
