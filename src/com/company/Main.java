@@ -30,6 +30,19 @@ public class Main {
 
 
 
+                //I dette her if/else statement siger vi, at spilleren der rammer tallet 40 først - vinder
+                //Det gør man ved at stoppe både while og for loops, hvis den ene af spiller rammer 40
+                if (playerOne >= 40) {
+                    System.out.println("Player 1 won with score: " + playerOne);
+
+                    //Her siger vi, at end er falsk, så while loop er ikke længere gyldyg og den stopper
+                    end = false;
+
+                    //Her stopper vi vores for loop, uanset om man har kastet tærning 20 gange, fordi resultatet 40 er opnået
+                    //og det giver ikke mening til at køre den videre
+                    break;
+                }
+
 
             }
 
