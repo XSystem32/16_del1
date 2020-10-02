@@ -41,6 +41,10 @@ public class Main {
                     //Her stopper vi vores for loop, uanset om man har kastet tærning 20 gange, fordi resultatet 40 er opnået
                     //og det giver ikke mening til at køre den videre
                     break;
+                } else if (playerTwo >= 40) {
+                    System.out.println("Player 2 won with score: " + playerTwo);
+                    end = false;
+                    break;
                 }
 
 
