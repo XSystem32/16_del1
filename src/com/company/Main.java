@@ -11,17 +11,18 @@ public class Main {
 
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("Indtast navn af spiller 1: ");
+        System.out.println("Enter the name of player 1: ");
         String player1 = scan.nextLine();
 
-        System.out.println("Indtast navn af spiller 2: ");
+        System.out.println("Enter the name of player 2: ");
         String player2 = scan.nextLine();
 
         //Vi laver en while loop, fordi vi vil gerne kaster terningerne indtil en af spillerne vinder
         //Det betyder her, at while loop kommer til at køre indtil boolen end bliver til false
+        System.out.println("Rolling the dice, waiting for the winner...");
         while (end) {
 
-//Her har vi lavet to integers, som er 0 til at stare med, men som kommer til at fylde mere
+        //Her har vi lavet to integers, som er 0 til at stare med, men som kommer til at fylde mere
             int playerOne = 0;
             int playerTwo = 0;
 
