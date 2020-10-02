@@ -13,19 +13,12 @@ class MainTest {
 
         for (int i = 0; i < 1000; i++) {
             int a = (int)(Math.random() * range) + min;
-            assertTrue(a >= min && a <= max);
-        }
-    }
+            int b = (int)(Math.random() * range) + min;
+            int c = a + b;
 
-    @Test
-    void castDiceFail() {
-        int min = 1;
-        int max = 6;
-        int range = max - min + 1;
+            System.out.println(c);
 
-        for (int i = 0; i < 1000; i++) {
-            int a = (int)(Math.random() * range) + min;
-            assertFalse(a <= 6 && a >= max);
+            assertTrue(c >= min*2 && c <= max*2);
         }
     }
 

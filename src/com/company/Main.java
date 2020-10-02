@@ -1,11 +1,21 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args)
     {
 
         boolean end = true;
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Indtast navn af spiller 1: ");
+        String player1 = scan.nextLine();
+
+        System.out.println("Indtast navn af spiller 2: ");
+        String player2 = scan.nextLine();
 
         //Vi laver en while loop, fordi vi vil gerne kaster terningerne indtil en af spillerne vinder
         //Det betyder her, at while loop kommer til at køre indtil boolen end bliver til false
@@ -20,20 +30,22 @@ public class Main {
 
                 //Her kaster man en terning og tilføjer resultatet til player 1 indtil han rammer 40 eller ovre
                 playerOne += castDice();
+                playerOne += castDice();
 
                 //Her sker det samme, bare med en anden player
                 playerTwo += castDice();
+                playerTwo += castDice();
 
                 //De her to sysout er lavet for at se hvor langt hver player er
-                System.out.println("Player 1 result is: " + playerOne);
-                System.out.println("Player 2 result is: " + playerTwo);
+                System.out.println(player1 + "'s result is: " + playerOne);
+                System.out.println(player2 + "'s result is: " + playerTwo);
 
 
 
                 //I dette her if/else statement siger vi, at spilleren der rammer tallet 40 først - vinder
                 //Det gør man ved at stoppe både while og for loops, hvis den ene af spiller rammer 40
                 if (playerOne >= 40) {
-                    System.out.println("Player 1 won with score: " + playerOne);
+                    System.out.println(player1 + " won with score: " + playerOne);
 
                     //Her siger vi, at end er falsk, så while loop er ikke længere gyldyg og den stopper
                     end = false;
@@ -42,7 +54,7 @@ public class Main {
                     //og det giver ikke mening til at køre den videre
                     break;
                 } else if (playerTwo >= 40) {
-                    System.out.println("Player 2 won with score: " + playerTwo);
+                    System.out.println(player2 + " won with score: " + playerTwo);
                     end = false;
                     break;
                 }
@@ -53,9 +65,6 @@ public class Main {
         }
 
     }
-
-
-
 
     //Denne metode returnerer et tilfældig nummmer fra 1 til 6
     public static int castDice(){
